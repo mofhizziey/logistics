@@ -155,7 +155,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.altclan.com',
     'https://api.cloudinary.com',
     'https://altclan.com',
-    'https://skyflishplash.onrender.com',
+    'https://logistics-ia1c.onrender.com',
     'https://skyflishplash.onrender.com',
     'http://localhost:8000',
     'http://127.0.0.1:8000',
@@ -216,7 +216,9 @@ CORS_ALLOWED_ORIGINS = [
     'http://www.altclan.com',
     'https://www.altclan.com',
     'https://altclan-brands-api-1-1.onrender.com',
-    'https://api.cloudinary.com'
+    'https://api.cloudinary.com',
+        'https://logistics-ia1c.onrender.com',
+    'https://skyflishplash.onrender.com',
 ]
 
 CORS_ORIGIN_WHITELIST = [
@@ -227,7 +229,9 @@ CORS_ORIGIN_WHITELIST = [
     'http://www.altclan.com',
     'https://www.altclan.com',
     'https://altclan-brands-api-1-1.onrender.com',
-    'https://api.cloudinary.com'
+    'https://api.cloudinary.com',
+        'https://logistics-ia1c.onrender.com',
+    'https://skyflishplash.onrender.com',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
