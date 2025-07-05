@@ -1,12 +1,14 @@
 services:
-  - name: logistics
+  - name: logistics-ia1c
     type: web
     env: docker
     plan: free
     dockerfilePath: Dockerfile
     healthCheckPath: /
-    envVarGroups:
-      - logistics-production  # Reference to environment group created in Render dashboard
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: logistics.settings
+      - key: SECRET_KEY
+        value: django-insecure-h%cb+9#cct3on^n^jfpz##j&9hs89$gq)%61a3^o!k@vdb1r4y
+      - key: ALLOWED_HOSTS
+        value: logistics-ia1c.onrender.com

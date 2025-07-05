@@ -2,11 +2,10 @@ version: '3.8'
 services:
   web:
     build: .
-    command: gunicorn logistics.wsgi:application --bind 0.0.0.0 --port ${PORT:-8000}
+    command: gunicorn logistics.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/code
     ports:
-      - "${PORT:-8000}:${PORT:-8000}"
-    env_file:
-      - .env
+      - "8000:8000"
     environment:
-      - DJANGO_SETTINGS_MODULE=logistics.settings
-      - PORT=${PORT:-8000}
+      - DATABASE_URL=postgresql://logistics_8mza_user:4NbhcetfdPGqa5TJdAyKmCAHjs336IzI@dpg-d1k3n7vdiees73e1kv50-a.oregon-postgres.render.com/logistics_8mza
